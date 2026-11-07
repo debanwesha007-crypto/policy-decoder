@@ -1,0 +1,12 @@
+:root {
+  --spidey-red: #e23636;
+  --spidey-red-dark: #b91f2b;
+  --spidey-blue: #1b3a8c;
+  --night: #0b1026;
+  --night-soft: #111936;
+  --web: rgba(255, 255, 255, 0.12);
+  --web-strong: rgba(255, 255, 255, 0.2);
+  --warn: #ffd23f;
+  --white: #ffffff;
+  --muted: #aeb7d0;
+}
