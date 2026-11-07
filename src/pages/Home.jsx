@@ -3,20 +3,24 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <main className="home-page cinematic-home">
-      {/* Background web atmosphere */}
+      {/* Animated atmosphere */}
       <div className="web-bg web-bg-left" />
       <div className="web-bg web-bg-right" />
-      <div className="red-glow red-glow-one" />
-      <div className="red-glow red-glow-two" />
 
-      {/* NAV / HERO */}
+      <div className="web-particle particle-one" />
+      <div className="web-particle particle-two" />
+      <div className="web-particle particle-three" />
+      <div className="web-particle particle-four" />
+      <div className="web-particle particle-five" />
+
+      {/* HERO */}
       <section className="cinematic-hero">
         <div className="hero-grid-overlay" />
 
         <div className="cinematic-content">
           <div className="hero-status">
             <span className="status-dot" />
-            <span>DECODE. UNDERSTAND. CLAIM WITH CONFIDENCE.</span>
+            <span>SPIDEY-SENSE ONLINE</span>
           </div>
 
           <p className="cinematic-eyebrow">
@@ -29,8 +33,8 @@ function Home() {
           </h1>
 
           <p className="cinematic-description">
-            Upload or paste your insurance policy and let our AI break down
-            complex language into simple, clear insights.
+            Upload or paste your insurance policy and let AI break down
+            complicated language into simple, clear insights.
           </p>
 
           <div className="cinematic-actions">
@@ -42,7 +46,7 @@ function Home() {
 
             <a href="#how-it-works" className="cinematic-secondary">
               <span className="play-icon">▶</span>
-              Learn More
+              See How It Works
             </a>
           </div>
 
@@ -59,19 +63,46 @@ function Home() {
           <div className="hero-web-circle web-circle-one" />
           <div className="hero-web-circle web-circle-two" />
 
-          <div className="spider-emblem">
-            <div className="spider-body">
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
+          {/* Swinging web */}
+          <div className="swing-web">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+
+          {/* Existing Spider-Man asset */}
+<div className="spidey-swing">
+  <div className="character-glow" />
+
+  <img
+    src="/images/spidey-hero.png"
+    alt="Spider-Man themed hero illustration"
+    className="spidey-character"
+  />
+</div>
+
+          {/* Floating insight */}
+          <div className="hero-insight-card insight-card-one">
+            <div className="insight-icon">✓</div>
+            <div>
+              <small>SPIDEY-SENSE</small>
+              <strong>Clause detected</strong>
+            </div>
+          </div>
+
+          {/* Floating risk */}
+          <div className="hero-insight-card insight-card-two">
+            <div className="insight-icon risk-icon">!</div>
+            <div>
+              <small>FINE PRINT</small>
+              <strong>Risk found</strong>
             </div>
           </div>
 
           <div className="hero-moon" />
 
+          {/* City */}
           <div className="city-silhouette">
             <span className="building building-one" />
             <span className="building building-two" />
@@ -82,46 +113,46 @@ function Home() {
             <span className="building building-seven" />
             <span className="building building-eight" />
           </div>
-
-          <div className="web-line web-line-one" />
-          <div className="web-line web-line-two" />
-          <div className="web-line web-line-three" />
         </div>
       </section>
 
-      {/* FEATURE CARDS */}
+      {/* FEATURES */}
       <section className="feature-cards-section">
-        <div className="feature-card feature-red">
+        <article className="feature-card feature-red">
           <div className="feature-icon">▣</div>
+
           <div>
             <h3>Simplified Insights</h3>
-            <p>Get plain-language summaries.</p>
+            <p>Get plain-language summaries without the insurance jargon.</p>
           </div>
-        </div>
+        </article>
 
-        <div className="feature-card feature-blue">
+        <article className="feature-card feature-blue">
           <div className="feature-icon">◇</div>
+
           <div>
             <h3>Know Your Rights</h3>
-            <p>Understand coverage and exclusions.</p>
+            <p>Understand coverage, exclusions and important conditions.</p>
           </div>
-        </div>
+        </article>
 
-        <div className="feature-card feature-purple">
+        <article className="feature-card feature-dark">
           <div className="feature-icon">ϟ</div>
-          <div>
-            <h3>Make Informed Decisions</h3>
-            <p>With clarity, not confusion.</p>
-          </div>
-        </div>
 
-        <div className="feature-card feature-orange">
+          <div>
+            <h3>Spot The Risk</h3>
+            <p>Find clauses that could affect your future claims.</p>
+          </div>
+        </article>
+
+        <article className="feature-card feature-red-dark">
           <div className="feature-icon">♢</div>
+
           <div>
             <h3>Secure & Reliable</h3>
-            <p>Your policy stays private.</p>
+            <p>Your policy analysis stays focused on what matters.</p>
           </div>
-        </div>
+        </article>
       </section>
 
       {/* HOW IT WORKS */}
@@ -143,8 +174,13 @@ function Home() {
         <div className="cinematic-steps">
           <article className="cinematic-step">
             <div className="step-number">01</div>
+
             <div className="step-line" />
+
+            <div className="step-web">✦</div>
+
             <h3>Drop your policy</h3>
+
             <p>
               Upload a PDF or paste the text of your insurance policy.
             </p>
@@ -152,8 +188,13 @@ function Home() {
 
           <article className="cinematic-step">
             <div className="step-number">02</div>
+
             <div className="step-line" />
+
+            <div className="step-web">◎</div>
+
             <h3>We decode it</h3>
+
             <p>
               Complex insurance language becomes simple, understandable
               explanations.
@@ -162,8 +203,13 @@ function Home() {
 
           <article className="cinematic-step">
             <div className="step-number">03</div>
+
             <div className="step-line" />
+
+            <div className="step-web">!</div>
+
             <h3>Spot the danger</h3>
+
             <p>
               Exclusions, waiting periods and claim conditions get flagged
               before they surprise you.
@@ -171,6 +217,7 @@ function Home() {
           </article>
         </div>
 
+        {/* FINAL CTA */}
         <div className="final-cta">
           <div>
             <span>READY TO SEE THROUGH THE FINE PRINT?</span>

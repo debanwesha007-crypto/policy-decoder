@@ -1,3 +1,5 @@
+
+import ThemeMusic from "./components/ThemeMusic";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Decoder from "./pages/Decoder";
@@ -9,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ThemeMusic />
 
       <Routes>
         <Route path="/" element={<Home />} />
