@@ -48,6 +48,48 @@ function Decoder() {
     setResult(null);
     setError("");
   };
+  const handleCopyResults = async () => {
+  if (!result) return;
+
+  const text = [
+    `Policy Type: ${result.policyType || "Insurance Policy"}`,
+    "",
+    `Summary: ${result.summary || "No summary available."}`,
+    "",
+    "What's Covered:",
+    ...(result.covered || []).map(
+      (item) => `- ${item.item}: ${item.plain}`
+    ),
+    "",
+    "Exclusions:",
+    ...(result.exclusions || []).map(
+      (item) =>
+        `- ${item.clause} [${item.severity || "low"}]: ${item.plain}`
+    ),
+    "",
+    "Waiting Periods:",
+    ...(result.waitingPeriods || []).map(
+      (item) => `- ${item.what}: ${item.duration}`
+    ),
+    "",
+    "Conditions:",
+    ...(result.conditions || []).map(
+      (item) => `- ${item.clause}: ${item.plain}`
+    ),
+    "",
+    scenario && result.scenarioVerdict
+      ? `Scenario Verdict: ${result.scenarioVerdict.likely}\n${result.scenarioVerdict.why}`
+      : "",
+  ].join("\n");
+
+  try {
+    await navigator.clipboard.writeText(text);
+    alert("Decoded results copied to clipboard!");
+  } catch (error) {
+    console.error(error);
+    alert("Could not copy the results.");
+  }
+};
 
   return (
     <main className="decoder-cinematic-page">
@@ -225,6 +267,12 @@ function Decoder() {
               <strong>{result.riskScore ?? "—"}</strong>
               <span>/100</span>
             </div>
+            <button
+  className="copy-results-button"
+  onClick={handleCopyResults}
+>
+  ⧉ Copy Results
+</button>
           </div>
 
           <div className="result-summary-card">

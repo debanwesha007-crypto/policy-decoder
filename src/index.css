@@ -3255,3 +3255,32 @@ a {
     font-size: 14px;
   }
 }
+.copy-results-button {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  padding: 11px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: 0.2s ease;
+}
+
+.copy-results-button:hover {
+  border-color: rgba(226, 54, 54, 0.7);
+  background: rgba(226, 54, 54, 0.12);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 650px) {
+  .results-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .copy-results-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
